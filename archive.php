@@ -12,7 +12,6 @@ get_header();
 
 <?php
 $container   = get_theme_mod( 'understrap_container_type' );
-$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
 
 <div class="wrapper" id="archive-wrapper">
@@ -61,14 +60,8 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 			<!-- The pagination component -->
 			<?php understrap_pagination(); ?>
 
-		</div><!-- #primary -->
-
 		<!-- Do the right sidebar check -->
-		<?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
-
-			<?php get_sidebar( 'right' ); ?>
-
-		<?php endif; ?>
+		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
 	</div> <!-- .row -->
 

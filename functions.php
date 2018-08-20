@@ -6,21 +6,19 @@
  */
 
 /**
+ * Initialize theme default settings
+ */
+require get_template_directory() . '/inc/theme-settings.php';
+
+/**
  * Theme setup and custom theme supports.
  */
 require get_template_directory() . '/inc/setup.php';
 
 /**
  * Register widget area.
- *
- * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
 require get_template_directory() . '/inc/widgets.php';
-
-/**
- * Load functions to secure your WP install.
- */
-require get_template_directory() . '/inc/security.php';
 
 /**
  * Enqueue scripts and styles.
@@ -33,9 +31,14 @@ require get_template_directory() . '/inc/enqueue.php';
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
- * Custom template tags for this theme.
+ * Custom pagination for this theme.
  */
 require get_template_directory() . '/inc/pagination.php';
+
+/**
+ * Custom hooks.
+ */
+require get_template_directory() . '/inc/hooks.php';
 
 /**
  * Custom functions that act independently of the theme templates.
@@ -60,7 +63,7 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Load custom WordPress nav walker.
  */
-require get_template_directory() . '/inc/bootstrap-wp-navwalker.php';
+require get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 
 /**
  * Load WooCommerce functions.
